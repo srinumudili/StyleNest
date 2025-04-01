@@ -24,7 +24,7 @@ const Hero = () => {
 
           {/* CTA Button */}
           <Link
-            to="/"
+            to="/collection/all"
             className="px-6 py-3 bg-[#E63946] text-lg font-semibold rounded-lg shadow-md 
              transition-all duration-300 hover:bg-[#C02739] text-white"
           >
