@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsByFilters } from "../redux/slices/productSlice";
 import SortOptions from "../components/Product/SortOptions";
 import ProductsGrid from "../components/Product/ProductsGrid";
-import FilterSidebar from "../components/Product/FilterSideBar";
+import FilterSidebar from "../components/Product/FilterSidebar";
 
 const Collection = () => {
   const { collection } = useParams();
