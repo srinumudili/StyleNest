@@ -43,7 +43,7 @@ app.use("/api/admin/products", adminProductRoutes);
 app.use("/api/admin/orders", adminOrderRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Hello from home");
+  res.send("Welcome to our StyleNest");
 });
 
 const PORT = process.env.PORT || 3000;
