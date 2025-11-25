@@ -18,7 +18,24 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
-app.use(cors({ origin: "*", credentials: true }));
+const allowedOrigins = [
+  "https://style-nest-ey8w.vercel.app",
+  "http://localhost:5173",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  })
+);
 
 //MongoDB Connection
 connectDB();
